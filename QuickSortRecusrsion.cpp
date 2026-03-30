@@ -1,62 +1,61 @@
 #include <iostream>
 using namespace std;
 
-int partition(int *arr, int s, int e)
-{
-    int pivot = arr[s];
+int partition(int *arr, int s, int e) {
 
-    int count = 0;
-    for (int i = s + 1; i <= e; i++)
-    {
-        if (arr[i] <= pivot)
+        int pivot = arr[s];
+
+        int count = 0;
+        for (int i = s + 1; i <= e; i++)
         {
-            count++;
+            if (arr[i] <= pivot)
+            {
+                count++;
+            }
+        }
+
+        int pivotIndex = s + count;
+        swap(arr[pivotIndex], arr[s]);
+
+        int i = s, j = e;
+
+        while (i < pivotIndex && j > pivotIndex)
+        {
+            while (arr[i] < pivot)
+            {
+                i++;
+            }
+
+            while (arr[j] > pivot)
+            {
+                j--;
+            }
+
+            if (i < pivotIndex && j > pivotIndex)
+            {
+                swap(arr[i++], arr[j--]);
+            }
         }
     }
-
-    int pivotIndex = s + count;
-    swap(arr[pivotIndex], arr[s]);
-
-    int i = s, j = e;
-
-    while (i < pivotIndex && j > pivotIndex)
-    {
-        while (arr[i] < pivot)
-        {
-            i++;
-        }
-
-        while (arr[j] > pivot)
-        {
-            j--;
-        }
-
-        if (i < pivotIndex && j > pivotIndex)
-        {
-            swap(arr[i++], arr[j--]);
-        }
-    }
-
-    return pivotIndex;
-}
 
 void quicksort(int *arr, int s, int e)
 {
+
     if (s >= e)
     {
         return;
     }
 
-    int p = partition(arr, s, e);
+    partition( arr, s , e);
+    
+    }
 
-    quicksort(arr, s, p - 1);
-    quicksort(arr, p + 1, e);
-}
 
 int main()
 {
-    int arr[] = {10, 8, 5, 13, 19};
-    int n = 5;
+
+    int arr[] = {10, 8, 5, 13, 19, 19, 72, 65, 65, 100};
+    int n = 10;
 
     quicksort(arr, 0, n - 1);
 
@@ -64,6 +63,8 @@ int main()
     {
         cout << arr[i] << " ";
     }
+    cout << endl;
+    
 
     return 0;
 }
