@@ -3,19 +3,24 @@ using namespace std;
 
 int main(){ 
 
-    // int num = 2;
-    char ch = '3';
+    char ch = '2';
+    int num = 2;
+
     cout << endl;
 
 
     switch (ch)
     {
-    case '3':
+    case 1:
         cout << "one" << endl;
         break;
 
-        case 2:
-        cout << "two" << endl;
+        case '2': 
+        switch (num)
+        {      case 2: cout << "num is " << num << endl;
+            break;
+        }
+        // cout << "two" << endl;
         break;
     
     default:
