@@ -43,13 +43,19 @@ public:
 
     void print()
     {
-        cout << "name is: " << this->name << endl;
-        cout << "health is: " << this->health << endl;
-        cout << "level is: " << this->level << endl;
+        cout << "[ name is: " << this->name << " ";
+        cout << "health is: " << this->health << " ";
+        cout << "level is: " << this->level << " ]"<< endl;
     }
 
     int health;
     // char level;
+
+    char getName(){ return *name;}
+
+    void setName(char name[]) {
+        strcpy(this-> name, name);
+    }
 
     int getHealth(){ 
         return health;}
@@ -68,12 +74,21 @@ int main()
     hero1.setAge(20);
     hero1.setHealth(80);
     hero1.level = 'A';
-    strcpy(hero1.name, "mohan");
+    char name[6] = "mohan";
+    hero1.setName(name);
+    // strcpy(hero1.name, "mohan");
     hero1.print();
-
 
     Hero hero2(hero1);
     hero2.print();
+
+    hero1.name[0] = 'S';
+    hero1.print();
+
+    hero2.print();
+
+
+
 
     return 0;
 }
