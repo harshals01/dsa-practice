@@ -28,6 +28,7 @@ bool isUnique(int arr[], int size, int n){
 
         }
     }
+    cout << "element not in array";
 }
 
 int main(){
