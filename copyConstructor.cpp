@@ -17,6 +17,10 @@ public:
         name = new char[100];
     }
 
+    ~Hero(){
+
+    cout<< "destructor called" << endl;
+ };
     // parameterized constructor
 
     Hero(int health, char level)
@@ -68,6 +72,7 @@ public:
 };
 
 
+
 int main()
 {
     Hero hero1;
@@ -75,17 +80,28 @@ int main()
     hero1.setHealth(80);
     hero1.level = 'A';
     char name[6] = "mohan";
+
     hero1.setName(name);
     // strcpy(hero1.name, "mohan");
-    hero1.print();
+
+    // hero1.print();
 
     Hero hero2(hero1);
-    hero2.print();
+    // hero2.print();
 
     hero1.name[0] = 'S';
     hero1.print();
 
     hero2.print();
+
+    cout << "copy assgnment " << endl;
+    hero1 = hero2;
+
+     hero1.print();
+
+    hero2.print();
+
+
 
 
 
