@@ -2,7 +2,7 @@
 using namespace std;
 class Person {
 
-    public: 
+    protected: 
     string name;
     int height;
     int weight;
@@ -29,6 +29,10 @@ class Person {
 
             cout << "male sleeping" << endl;
         }
+
+        string getcolor(){
+            return this->color;
+        }
     };
 
    
@@ -39,18 +43,20 @@ int main() {
    Male obj1;
 
 
-    obj1.name= "Rahul";
+    // obj1.name= "Rahul";
     obj1.height = 5;
-    obj1.weight = 50;
-    obj1.Age= 18;
-    obj1.setweight(45);
+    // obj1.weight = 50;
+    // obj1.Age= 18;
+    // obj1.setweight(45);
     obj1.color = "white";
 
-    cout << "Student Name : " << obj1.name << endl;
-    cout << "Student Rollno : " << obj1.height << endl;
-    cout << "Student Age : " << obj1.getAge() << endl;
-    cout << "Student weight : " << obj1.weight << endl;
+    // cout << "Student Name : " << obj1.name << endl;
+    cout << "Student height : " << obj1.height << endl;
+    // cout << "Student Age : " << obj1.getAge() << endl;
+    // cout << "Student weight : " << obj1.weight << endl;
     cout << "Student color : " << obj1.color << endl;
     obj1.sleep();
+
+    return 0;
 }
 
