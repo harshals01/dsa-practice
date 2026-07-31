@@ -20,7 +20,7 @@ class Person {
     }
 };
 
-    class Male: public Person{
+    class Male: protected Person{
 
         public:
         string color;
