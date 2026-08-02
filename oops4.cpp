@@ -33,6 +33,13 @@ class Person {
         string getcolor(){
             return this->color;
         }
+
+        int getheight(){
+
+            return this->height;
+        }
+
+
     };
 
    
@@ -48,12 +55,14 @@ int main() {
     // obj1.weight = 50;
     // obj1.Age= 18;
     // obj1.setweight(45);
+    obj1.getheight();
+
     obj1.color = "white";
 
     // cout << "Student Name : " << obj1.name << endl;
     cout << "Student height : " << obj1.height << endl;
     // cout << "Student Age : " << obj1.getAge() << endl;
-    // cout << "Student weight : " << obj1.weight << endl;
+    cout << "Student height : " << obj1.height << endl;
     cout << "Student color : " << obj1.color << endl;
     obj1.sleep();
 
