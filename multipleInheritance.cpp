@@ -40,7 +40,7 @@ int main(){
     d.waterInfo();
     d.number = 5;
 
-    cout << "number of vehicel is: " << d.number << endl;
+    cout << "number of vehicle is: " << d.number << endl;
 
 
     return 0;
