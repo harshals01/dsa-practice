@@ -52,7 +52,7 @@ int main(){
 
 
     cout << "number of vehicle is: " << d.chassis << endl;
-    d.landVehicle :: vehicleNo();
+    d.waterVehicle :: vehicleNo();
 
     return 0;
 }
