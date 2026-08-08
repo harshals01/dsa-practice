@@ -18,6 +18,7 @@ class landVehicle{
     void landInfo(string vehicleType){
 
         cout << "land vehc number is not defined" << endl;
+        cout << "vehicle type: " << vehicleType <<endl;
     }
 };
 
