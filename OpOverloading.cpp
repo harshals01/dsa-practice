@@ -9,11 +9,16 @@ class B{
     int b;
 
     public:
-    void operator+ (B &obj){
+    void operator+ (const B &obj){
 
         int value1 = this -> a;
-        int value2 = obj.b;
-        cout << "output " << value2- value1 << endl;
+        int value2 = obj.a;
+        cout << "output: " << value2- value1 << endl;
+    }
+
+    void operator- (B &car){
+
+        cout << "speed limit exceeded" << endl;
     }
 
 
@@ -24,9 +29,12 @@ int main(){
     B obj1, obj2;
 
     obj1.a = 4;
-    obj2.b = 7;
+    obj2.a = 7;
 
     obj1 + obj2;
+
+    B car1, car2;
+    car1 -car2;
     
 
 return 0;
