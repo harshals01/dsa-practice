@@ -22,7 +22,7 @@ void sortOne(int arr[], int n)
         {
             i++;
         }
-        while (i<j && arr[j] == 1)
+        while (i<j &&  arr[j] == 1)
         {
             j--;
         }
